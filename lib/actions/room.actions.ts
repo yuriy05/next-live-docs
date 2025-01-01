@@ -12,7 +12,7 @@ export async function createDocument({ userId, email }: CreateDocumentParams) {
     const metadata = {
       creatorId: userId,
       email,
-      title: "Untitled document",
+      title: "Untitled",
     };
 
     const usersAccesses: RoomAccesses = {
@@ -29,6 +29,6 @@ export async function createDocument({ userId, email }: CreateDocumentParams) {
 
     return parseStringify(room);
   } catch (error) {
-    console.error(`Something went wrong while creating document.. ${error}`);
+    console.log(`Error happened while creating a room: ${error}`);
   }
 }
