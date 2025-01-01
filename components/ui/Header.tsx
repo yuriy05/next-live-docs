@@ -1,10 +1,11 @@
+import { cn } from "@/lib/utils";
 import { JSX } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function Header({ children }: HeaderProps): JSX.Element {
+function Header({ children, className }: HeaderProps): JSX.Element {
   return (
-    <header className="header">
+    <header className={cn("header", className)}>
       <Link href="/" className="md:flex-1">
         <Image
           src="/assets/icons/logo.svg"
