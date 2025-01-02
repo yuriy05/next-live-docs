@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import Header from "@/components/ui/Header";
+import Header from "@/components/Header";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
