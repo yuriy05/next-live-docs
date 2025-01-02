@@ -47,7 +47,7 @@ function CollaborativeRoom({ roomId, roomMetadata }: CollaborativeRoomProps) {
   useClickOutside({
     ref: containerRef,
     onClickOutside: () => {
-      setEditing((editing) => !editing);
+      setEditing(false);
       updateDocument(roomId, documentTitle);
     },
   });
