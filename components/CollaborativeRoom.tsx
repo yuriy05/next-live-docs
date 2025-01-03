@@ -13,6 +13,7 @@ import { Editor } from "./editor/Editor";
 import { Input } from "./ui/input";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { updateDocument } from "@/lib/actions/room.actions";
+import Loader from "./Loader";
 
 function CollaborativeRoom({ roomId, roomMetadata }: CollaborativeRoomProps) {
   const currentUserType = "editor";
@@ -63,7 +64,7 @@ function CollaborativeRoom({ roomId, roomMetadata }: CollaborativeRoomProps) {
 
   return (
     <RoomProvider id={roomId}>
-      <ClientSideSuspense fallback={<div>Loading…</div>}>
+      <ClientSideSuspense fallback={<Loader />}>
         <div className="collaborative-room">
           <Header>
             <div
